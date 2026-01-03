@@ -5,120 +5,8 @@
   <title>Beyond Classrooms – Kerala</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      overflow: hidden;
-    }
-
-    /* Splash Screen */
-    .splash {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #000000, #1c1c1c);
-      z-index: 10;
-      animation: fadeOut 1s ease forwards;
-      animation-delay: 2s;
-    }
-
-    .splash h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-      text-align: center;
-      animation: zoomIn 2s ease;
-    }
-
-    /* Main Content */
-    .main {
-      display: none;
-      max-width: 900px;
-      margin: auto;
-      padding: 30px;
-      animation: fadeIn 1.2s ease forwards;
-    }
-
-    h1.main-title {
-      text-align: center;
-      font-size: 2.6rem;
-      margin-bottom: 30px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-
-    .card:hover { transform: scale(1.02); }
-
-    h2 { color: #ffd369; margin-top: 0; }
-
-    ul { padding-left: 20px; }
-    ul li { margin-bottom: 8px; }
-
-    .buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-top: 15px;
-    }
-
-    .btn {
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 25px;
-      background: #ffd369;
-      color: #000;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-
-    .btn:hover {
-      background: #fff;
-      transform: translateY(-3px);
-    }
-
-    .note {
-      background: rgba(255,0,0,0.15);
-      border-left: 5px solid #ff4c4c;
-    }
-
-    .highlight {
-      color: #00ffcc;
-      font-weight: bold;
-    }
-
-    /* Animations */
-    @keyframes fadeOut {
-      to { opacity: 0; visibility: hidden; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes zoomIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @media (max-width: 600px) {
-      .splash h1 { font-size: 2rem; }
-      h1.main-title { font-size: 2rem; }
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -131,17 +19,31 @@
   <div class="main" id="main">
 
     <h1 class="main-title">Beyond Classrooms: Kerala Escape 🌿</h1>
+     <div class="card">
+      <h2>🔗 Your Journey Starts Here</h2>
+      <div class="buttons">
+        <a class="btn" href="https://forms.gle/M1bnrV4yoFewH3sC6" target="_blank">
+          🧳 Reserve Your Seat - Form
+        </a>
+        <a class="btn" href="https://docs.google.com/presentation/d/1ZqLGwaHj6MQF_fblD6xjjgCRO7w7dxpl/edit" target="_blank">
+          🗺️ Route & Destinations
+        </a>
+         <a class="btn" href="payment.html" target="_blank">
+            💸Payment
+        </a>
+      </div>
+    </div>
 
     <div class="card">
       <h2>💼 Trip Wallet Breakdown</h2>
-      <p><span class="highlight">Total Budget:</span> ₹10,500</p>
+      <p><span class="highlight">Total Budget:</span> ₹8500</p>
       <ul>
-        <li>₹8,700 – Food, Accommodation, Train Travel & Guide</li>
-        <li>₹800 – Local Entry Tickets (Parks, Museum, Boating, etc.)</li>
-        <li>₹1,000 – Wonderla Adventure</li>
+        <li>7500 – Food, Accommodation</li>
+        <li>1500 - Train tickets & Advance for travels </li>
         <li>Extra amount – Based on personal travel interests</li>
       </ul>
     </div>
+    
 
     <div class="card note">
       <h2>⚠ Travel Ground Rules</h2>
@@ -152,37 +54,10 @@
         <li>Any additional expenses are personal</li>
       </ul>
     </div>
-
-    <div class="card">
-      <h2>💳 Booking Lock-In Amount</h2>
-      <p>
-        To confirm your seat, a payment of  
-        <span class="highlight">₹1,500 must be paid before 3rd January</span>  
-        for travel bookings.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>🔗 Your Journey Starts Here</h2>
-      <div class="buttons">
-        <a class="btn" href="https://forms.gle/M1bnrV4yoFewH3sC6" target="_blank">
-          🧳 Reserve Your Seat-Form
-        </a>
-        <a class="btn" href="https://docs.google.com/presentation/d/1ZqLGwaHj6MQF_fblD6xjjgCRO7w7dxpl/edit" target="_blank">
-          🗺️ Route & Destinations
-        </a>
-      </div>
-    </div>
-
+    
   </div>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById("splash").style.display = "none";
-      document.getElementById("main").style.display = "block";
-      document.body.style.overflow = "auto";
-    }, 2000);
-  </script>
-
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
