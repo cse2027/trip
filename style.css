@@ -8,8 +8,9 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #fff;
-  overflow: hidden;
+  overflow-x: hidden;   /* allow vertical scroll */
 }
+
 
 /* ================= SPLASH SCREEN ================= */
 .splash {
@@ -107,13 +108,10 @@ ul li {
 /* ================= PAYMENT SECTION ================= */
 
 .payment-wrapper {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 22px;
-  padding: 20px;
 }
 
 /* PAYMENT CARD */
@@ -127,6 +125,7 @@ ul li {
   align-items: center;
   overflow: hidden;
   border-radius: 20px;
+  flex-direction: row;
 }
 
 /* QR or Text */
@@ -269,3 +268,32 @@ ul li {
 .payment-button a{
     text-decoration: none;
 }
+.info-box {
+  width: 350px;
+  padding: 20px;
+  background: #07182E;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.info h6 {
+  margin: 0;
+  font-size: 16px;
+  color: #00eaff;
+}
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .info-box {
+    width: 90%;
+  }
+}
+
